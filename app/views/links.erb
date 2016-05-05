@@ -5,9 +5,8 @@
 		<li>
 			Title: <%= link.title %>
 			URL: <%= link.url %>
-
-			<% link.tags.each do |tag| %>
-			Tags: <%= tag.name %>
+			Tags: <% link.tags.each do |tag| %>
+			#<%= tag.name %>
 			<% end %>
 		</li>
 	<% end %>
