@@ -1,5 +1,3 @@
-require 'pry'
-
 ENV["RACK_ENV"] ||= 'development'
 
 require 'sinatra/base'
@@ -27,6 +25,11 @@ class BookmarkManager < Sinatra::Base
 
   get '/links/new' do
     erb :new
+  end
+
+  get '/links/tags/:name' do
+    @links = Tag.all(name: params[:name]).links
+    erb :links
   end
 
   # start the server if ruby file executed directly
