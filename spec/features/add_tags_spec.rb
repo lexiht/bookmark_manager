@@ -7,7 +7,6 @@ feature 'Add tag to links' do
     fill_in :tags, with: 'search'
     click_button "Submit"
 
-    expect(current_path).to eq '/links'
     link = Link.first
     expect(link.tags.map(&:name)).to include 'search'
   end

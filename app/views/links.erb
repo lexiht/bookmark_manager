@@ -5,7 +5,7 @@
 		<li>
 			Title: <%= link.title %>
 			URL: <%= link.url %>
-			Tags: <%= link.tags %>  <!--no tags value -->
+			Tags: <%= link.tags.each { |tag| print tag } %>  <!--no tags value -->
 		</li>
 	<% end %>
 </ul>
