@@ -8,6 +8,7 @@ feature 'Sign up' do
 
   scenario 'checks mismatching password' do
     expect { sign_up_incorrect }.not_to change(User, :count)
+    # expect(page).to have_content "Password and confirmation password do not match"
   end
 
 end
