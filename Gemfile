@@ -6,6 +6,7 @@ gem 'database_cleaner'
 gem 'sinatra'
 gem 'rake'
 gem 'bcrypt'
+gem 'sinatra-flash'
 
 group :development, :test do
 	gem 'capybara'
