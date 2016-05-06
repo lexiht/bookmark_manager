@@ -21,4 +21,12 @@ feature 'Sign up' do
   	expect(page).to have_current_path('/users')
   	expect(page).to have_selector('input[value="hazukitran@gmail.com"]')
   end
+
+  scenario "user can't sign up with blank email" do
+    expect { sign_up_without_email }.not_to change(User, :count)
+  end
+
+  scenario "user can't sign up with invalid email" do
+    expect { sign_up_invalid_email }.not_to change(User, :count)
+  end
 end
